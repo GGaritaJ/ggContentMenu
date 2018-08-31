@@ -36,7 +36,7 @@
                     $(".ggContentMenu div.contentMenu.first").css("width", "260px");
                 }
             });
-            $(this).ContentMenu().Refresh(options);
+            _opts = options;
             console.log("gg:content menu ready!");
         }
         catch (err) {
@@ -51,48 +51,47 @@
     jQuery.fn.ContentMenu().Refresh = function (options) {
         try {
             var _height = $(window).height();
+            var _menuContainer = $(this).find("div.contentMenu.first");
             _opts = ((options == undefined || options === null || options === "") ? _opts : options);
             if ((_opts != undefined) && (_opts !== null) && (_opts !== "")) {
                 if (_opts.hasOwnProperty("top")) {
-                    $(".ggContentMenu div.contentMenu.first").css("top", _opts.top);
+                    $(_menuContainer).css("top", _opts.top);
                     _height -= (_opts.top);
                 } else {
-                    $(".ggContentMenu div.contentMenu.first").css("top", 0).css("border-top", "0px");
+                    $(_menuContainer).css("top", 0).css("border-top", "0px");
                 }
                 if (_opts.hasOwnProperty("bottom")) {
-                    $(".ggContentMenu div.contentMenu.first").css("bottom", _opts.bottom);
+                    $(_menuContainer).css("bottom", _opts.bottom);
                     _height -= (_opts.bottom);
                 } else {
-                    $(".ggContentMenu div.contentMenu.first").css("bottom", 0).css("border-bottom", "0px");
+                    $(_menuContainer).css("bottom", 0).css("border-bottom", "0px");
                 }
                 if (_opts.hasOwnProperty("left")) {
-                    $(".ggContentMenu div.contentMenu.first").css("left", _opts.left).css("border-left", "0px");
+                    $(_menuContainer).css("left", _opts.left).css("border-left", "0px");
                 } else {
-                    $(".ggContentMenu div.contentMenu.first").css("left", 0);
+                    $(_menuContainer).css("left", 0);
                 }
                 if (_opts.hasOwnProperty("right")) {
-                    $(".ggContentMenu div.contentMenu.first").css("right", _opts.right).css("border-right", "0px");
+                    $(_menuContainer).css("right", _opts.right).css("border-right", "0px");
                 }
                 if (_opts.hasOwnProperty("height")) {
-                    $(".ggContentMenu div.contentMenu.first").css("max-height", _opts.height);
+                    $(_menuContainer).css("max-height", _opts.height);
                 } else {
-                    $(".ggContentMenu div.contentMenu.first").css("max-height", _height);
+                    $(_menuContainer).css("max-height", _height);
                 }
             } else {
-                $(".ggContentMenu div.contentMenu.first").css("top", 0);
-                $(".ggContentMenu div.contentMenu.first").css("left", 0);
-                $(".ggContentMenu div.contentMenu.first").css("bottom", 0);
-                $(".ggContentMenu div.contentMenu.first").css("max-height", _height);
-                $(".ggContentMenu div.contentMenu.first").css("z-index", 100);
+                $(_menuContainer).css("top", 0);
+                $(_menuContainer).css("left", 0);
+                $(_menuContainer).css("bottom", 0);
+                $(_menuContainer).css("max-height", _height);
+                $(_menuContainer).css("z-index", 100);
             }
         }
         catch (err) {
             console.log("Error: " + err + ".");
         }
-        finally {
-            setTimeout(function () {
-                window.dispatchEvent(new Event('resize'));
-            }, 1000);
-        }
     };
+    $(window).bind('resize', function () {
+        $(".ggContentMenu").ContentMenu().Refresh(_opts);
+    });
 })(jQuery);
