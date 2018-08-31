@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ggContentMenu" />
+    <meta name="author" content="Ing.Gerardo Garita Juarez" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="X-Xss-Protection" content="'1; mode=block' always">
+    <meta http-equiv="X-Content-Type-Options" content="'nosniff' always">
+    <title>jQuery Plugin ggContentMenu</title>
+    <link href="css/bootstrap-3.3.7.css" rel="stylesheet" />
+    <link href="css/contentMenu.css" rel="stylesheet" />
+    <link href="css/myStyle.css" rel="stylesheet" />
+</head>
+<body>
+
+    <nav>
+        <ul id="myMenu" class="ggContentMenu">
+            <li>
+
+                <a href="#" tabindex="0">
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                </a>
+
+                <div class="contentMenu first">
+                    <ul>
+
+                        <li menu-level="1" id="menu_dashboards">
+                            <a tabindex="0">
+                                <span class="dashboards">DASHBOARDS</span>
+                            </a>
+                            <div class="contentMenu">
+                                <ul>
+                                    <li menu-level="2" id="li_Dashboard_Producer">Dashboard de productor</li>
+                                    <li menu-level="2" id="li_SMS_Code_Country">Dashboard de codigo sms</li>
+                                    <li menu-level="2" id="li_SMS_Code_Producer">Dashboard codigo sms - productor</li>
+                                    <li menu-level="2" id="li_Infrastructure_Dashboard">Dashboard de infraestructuras</li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li menu-level="1" id="menu_maintenance">
+                            <a tabindex="0">
+                                <span class="mantenimientos">MANTENIMIENTOS</span>
+                            </a>
+                            <div class="contentMenu">
+                                <ul>
+                                    <li menu-level="2" id="li_Producer">Productores</li>
+                                    <li menu-level="2" id="li_Farm">Fincas</li>
+                                    <li menu-level="2" id="li_DemoPlot">Parcelas</li>
+                                    <li menu-level="2" id="li_Synchronization">Sincronizacion</li>
+                                    <li menu-level="2" id="li_HomeCatalogs">Catalogos</li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li menu-level="1" id="menu_techAssistance">
+                            <a tabindex="0">
+                                <span class="asistencia">ASISTENCIA TECNICA</span>
+                            </a>
+                            <div class="contentMenu">
+                                <ul>
+                                    <li menu-level="2" id="li_AgronomicVisit">Visita Tecnica</li>
+                                    <li menu-level="2" id="li_ActionPlan">Plan de accion</li>
+                                    <li menu-level="2" id="li_SoilAnalysis">Analisis de suelos</li>
+                                    <li menu-level="2" id="li_FieldCropEstimate">Estimacion de cosecha corta</li>
+                                    <li menu-level="2" id="li_ShortCropEstimate">Estimacion de cosecha larga</li>
+                                    <li menu-level="2" id="li_Questionnaire">Cuestionarios</li>
+                                    <li menu-level="2" id="li_Survey">Encuestas</li>
+                                    <li menu-level="2" id="li_MicroLot">Microlotes</li>
+                                    <li menu-level="2" id="li_WorkPlan">Plan de trabajo</li>
+                                    <li menu-level="2" id="li_FocusGroup">Grupos focales</li>
+                                    <li menu-level="2" id="li_Valuation">Avaluos</li>
+                                    <li menu-level="2" id="li_WeatherInformation">Clima</li>
+                                    <li menu-level="2" id="li_Sampling">Muestreo</li>
+                                    <li menu-level="2" id="li_ProdCost">Costos de Produccion</li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li menu-level="1" id="menu_renovation">
+                            <a tabindex="0">
+                                <span class="renovacion">RENOVACION</span>
+                            </a>
+                            <div class="contentMenu">
+                                <ul>
+                                    <li menu-level="2" id="li_PreSowing">Pre siembra</li>
+                                    <li menu-level="2" id="li_PreSowing">Post siembra</li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li menu-level="1" id="menu_sustainability">
+                            <a tabindex="0">
+                                <span class="sostenibilidad">SOSTENIBILIDAD</span>
+                            </a>
+                            <div class="contentMenu">
+                                <ul>
+                                    <li menu-level="2" id="li_Group">Grupos</li>
+                                    <li menu-level="2" id="li_ManagmentGroups">Manejo de grupos</li>
+                                    <li menu-level="2" id="li_Project">Proyectos</li>
+                                    <li menu-level="2" id="li_Traceability">Trazabilidad</li>
+                                    <li menu-level="2" id="li_SMSCode">
+                                        <a tabindex="0">
+                                            <span class="sostenibilidad">SMS Code</span>
+                                        </a>
+                                        <div class="contentMenu">
+                                            <ul>
+                                                <li menu-level="3" id="li_SmsPrograms">SMS CODE Programas</li>
+                                                <li menu-level="3" id="li_SmsAssignments">SMS CODE Asignaciones</li>
+                                                <li menu-level="3" id="li_SmsQuestionary">SMS CODE Cuestionarios</li>
+                                                <li menu-level="3" id="li_SmsEvaluation">SMS CODE Evaluaciones</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li menu-level="1" id="menu_Training">
+                            <a tabindex="0">
+                                <span class="capacitacion">CAPACITACION</span>
+                            </a>
+                            <div class="contentMenu">
+                                <ul>
+                                    <li menu-level="2" id="li_TrainingDefinition">Planes de capacitacion</li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li menu-level="1" id="menu_Technicians">
+                            <a tabindex="0">
+                                <span class="tecnicos">TECNICOS</span>
+                            </a>
+                            <div class="contentMenu">
+                                <ul>
+                                    <li menu-level="2" id="li_Appointment">Asignaciones</li>
+                                    <li menu-level="2" id="li_Indicators_Title">Indicadores</li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li menu-level="1" id="menu_Reports">
+                            <a tabindex="0" href="~/Home/Reports">
+                                <span class="reportes">REPORTES</span>
+                            </a>
+                        </li>
+
+                        <li menu-level="1" id="menu_config">
+                            <a tabindex="0">
+                                <span class="config">CONFIGURACION</span>
+                            </a>
+                            <div class="contentMenu">
+                                <ul>
+                                    <li menu-level="2" id="li_User">Usuarios</li>
+                                    <li menu-level="2" id="li_UserProdFarmAssignment">Asignacion de productores y fincas</li>
+                                    <li menu-level="2" id="li_Tablet">Dispositivos moviles</li>
+                                    <li menu-level="2" id="li_Question">Preguntas</li>
+                                    <li menu-level="2" id="li_DonorSponsor">Donador patrocinador</li>
+                                    <li menu-level="2" id="li_ProducerErasing">Borrado de productores</li>
+                                    <li menu-level="2" id="li_Relation">Transferencia de relacionados</li>
+                                    <li menu-level="2" id="li_FarmsTransfer">Transferencia de fincas</li>
+                                    <li menu-level="2" id="li_SurveyActivation">Activacion de encuestas</li>
+                                    <li menu-level="2" id="li_ProducerActivation">Activacion de productores</li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </li>
+        </ul>
+    </nav>
+
+    <section id="mainContainer">
+        <div>
+            <label>Hello world!</label>
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap-3.3.7.js"></script>
+    <script src="js/contentMenu.js"></script>
+    <script src="js/myscript.js"></script>
+
+</body>
+</html>

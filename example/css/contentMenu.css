@@ -1,0 +1,103 @@
+﻿/*////////////////////////////////////////////
+// ggContentMenu Cell JS/CSS PlugIn V1.0    //
+// Developed by: Ing.Gerardo Garita J.      //
+// FullStack Developer                      //
+// email: info@ggaritaj.com                 //
+// date: friday, 2018-09-01                 //
+// last date: friday, 2018-09-01            //
+////////////////////////////////////////////*/
+
+ul.ggContentMenu:first-child,
+.ggContentMenu ul {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.ggContentMenu ul li {
+    padding:10px 5px;
+    text-align:left;
+}
+
+.ggContentMenu ul li a {
+    margin:10px 5px;
+}
+
+.ggContentMenu ul li a:hover {
+    cursor:pointer;
+    text-decoration:none;
+}
+
+.ggContentMenu a + div.contentMenu {
+    display:none !important;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.ggContentMenu div.contentMenu.first {
+    position: absolute;
+    overflow: auto;
+    border-radius: 0px;
+    width: 260px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 100px 10px rgba(0, 0, 0, .14), 
+        0px 1px 10px 0px rgba(0, 0, 0, .12), 
+        0px 2px 4px -1px rgba(0, 0, 0, .2);
+}
+
+.ggContentMenu li[menu-level="1"] {
+    text-align: center;
+}
+
+
+    .ggContentMenu a:before {
+        content: "+";
+    }
+
+.ggContentMenu a[href]:before {
+    content: none !important;
+}
+
+.ggContentMenu a.active + div.contentMenu {
+    -webkit-animation: fadeInLeft 0.7s ease-in-out both;
+    animation: fadeInLeft 0.7s ease-in-out both;
+    display: block !important;
+    max-width: 250px;
+}
+
+    .ggContentMenu a.active + div.contentMenu:not(.first) {
+        margin-top:15px;
+        background:#f9f9f9;
+    }
+        .ggContentMenu a.active:before {
+            content: "-";
+        }
+
+@-webkit-keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
