@@ -52,9 +52,9 @@ ul.ggContentMenu:first-child,
     margin: 10px 5px;
     outline: none;
     text-decoration: none;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 .ggContentMenu ul li a:hover {
@@ -64,6 +64,9 @@ ul.ggContentMenu:first-child,
 
 .ggContentMenu ul li a:focus {
     color:#ff0000;
+}
+
+.ggContentMenu ul li a:focus span {
     text-decoration:underline !important
 }
 

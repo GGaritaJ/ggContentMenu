@@ -19,8 +19,12 @@
             $(_menu).find("a").each(function (p, atag) {
                 $(atag).on("click", function (e) {
                     if ($(this).hasClass("active")) {
+                        $($(this).find("span.glyphicon")).removeClass("glyphicon-chevron-left");
+                        $($(this).find("span.glyphicon")).addClass("glyphicon-menu-hamburger");
                         $(this).removeClass("active");
                     } else {
+                        $($(this).find("span.glyphicon")).removeClass("glyphicon-menu-hamburger");
+                        $($(this).find("span.glyphicon")).addClass("glyphicon-chevron-left");
                         $(this).addClass("active");
                     }
                 });
@@ -28,6 +32,8 @@
             $('html').unbind("click").on('click', function (event) {
                 if ($(_menu).find($(event.target)).length <= 0) {
                     $(".ggContentMenu div.contentMenu.first").animate({ width: "0px" }, 700);
+                    $($(".ggContentMenu a.active").find("span.glyphicon")).removeClass("glyphicon-chevron-left");
+                    $($(".ggContentMenu a.active").find("span.glyphicon")).addClass("glyphicon-menu-hamburger");
                     setTimeout(function () {
                         $(".ggContentMenu a.active").removeClass("active");
                         $(".ggContentMenu div.contentMenu.first").css("width", "260px");
